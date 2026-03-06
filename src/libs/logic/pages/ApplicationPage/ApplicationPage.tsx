@@ -1,9 +1,7 @@
 "use client";
 
-import { usePrivy } from "@privy-io/react-auth";
-import { ApplicationsLogin, useAdmin } from "logic/components";
+import { useAdmin } from "logic/components";
 import { printFiat } from "logic/utils";
-import { Msg } from "ui/components";
 
 import { useApplication } from "./ApplicationPageProvider";
 import { ApplicationSelector } from "./ApplicationSelector";
@@ -20,18 +18,8 @@ import {
 import { STEPS } from "./core/constants";
 
 export function ApplicationPage() {
-  const { ready, user } = usePrivy();
   const { step } = useApplication();
   const { isAdminMode } = useAdmin();
-
-  if (!ready) return <Msg className="m-auto">Loading...</Msg>;
-
-  if (!user || !user.email)
-    return (
-      <div className="flex flex-col justify-start items-center mt-16 -mb-16 h-main">
-        <ApplicationsLogin className="items-center" />
-      </div>
-    );
 
   return (
     <>

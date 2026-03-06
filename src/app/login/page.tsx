@@ -1,25 +1,18 @@
 "use client";
 
-import { usePrivy } from "@privy-io/react-auth";
-import { WelcomeBackLogin } from "logic/components";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import { Msg } from "ui/components";
+import { useEffect } from "react";
 
 export default function LoginPage() {
-  const { authenticated, ready } = usePrivy();
-  const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
 
   useEffect(() => {
-    if (!ready) return;
-    if (authenticated)
-      router.push("/applications");
-    else
-      setIsLoading(false);
-  }, [ready, authenticated, router]);
+    router.push("/");
+  }, [router]);
 
-  if (!ready || isLoading) return <Msg className="my-auto">Loading...</Msg>;
-
-  return <WelcomeBackLogin className="min-h-main justify-center relative -top-16" />;
+  return (
+    <div className="flex min-h-main items-center justify-center">
+      <p className="text-lg text-muted-foreground">Redirecting...</p>
+    </div>
+  );
 }

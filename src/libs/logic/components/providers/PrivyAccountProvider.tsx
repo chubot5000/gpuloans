@@ -1,26 +1,9 @@
 "use client";
 
-import { useLinkAccount, usePrivy, type User } from "@privy-io/react-auth";
-import { sendWelcomeEmail } from "logic/data";
 import { createContext, type ReactNode, useContext } from "react";
 
-function usePrivyAccountState(user: User) {
-  const privy = usePrivy();
-
-  const { linkEmail } = useLinkAccount({
-    onSuccess: async ({ linkedAccount }) => {
-      if (linkedAccount.type == "email") {
-        await sendWelcomeEmail(linkedAccount.address).catch((error) => {
-          console.error(JSON.stringify(error, null, 2));
-        });
-      }
-    },
-  });
-
-  return { ...privy, user, canUnlink: user.linkedAccounts.length > 1, linkEmail };
-}
-
-const PrivyAccountContext = createContext<ReturnType<typeof usePrivyAccountState> | undefined>(undefined);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const PrivyAccountContext = createContext<any>(undefined);
 
 export function usePrivyAccount() {
   const context = useContext(PrivyAccountContext);
@@ -30,13 +13,22 @@ export function usePrivyAccount() {
 
 interface Props {
   children: ReactNode;
-  user: User;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  user: any;
 }
 
 export function PrivyAccountProvider(props: Props) {
   const { children, user } = props;
 
-  const state = usePrivyAccountState(user);
+  const state = {
+    user,
+    authenticated: false,
+    ready: true,
+    canUnlink: false,
+    linkEmail: () => {},
+    login: () => {},
+    logout: async () => {},
+  };
 
   return <PrivyAccountContext.Provider value={state}>{children}</PrivyAccountContext.Provider>;
 }

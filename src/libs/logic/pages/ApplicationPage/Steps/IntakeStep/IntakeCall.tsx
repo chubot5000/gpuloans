@@ -1,6 +1,5 @@
 "use client";
 
-import { usePrivy } from "@privy-io/react-auth";
 import { STAGES } from "data/clients/pipedrive/constants.generated";
 import { patchDeal } from "data/fetchers";
 import type { StepState } from "logic/components";
@@ -19,16 +18,11 @@ interface IntakeCallProps {
 export function IntakeCall(props: IntakeCallProps) {
   const { state, onEventScheduled } = props;
   const { dealDetail } = useApplication();
-  const { user } = usePrivy();
   const { data: callData, refetch } = useDealCallStatus(dealDetail.id);
 
   const prefillData = useMemo(() => {
-    const emailAccount = user?.linkedAccounts.find((account) => account.type === "email");
-    const email = emailAccount && "address" in emailAccount ? emailAccount.address : "";
-    const name = user?.google?.name || user?.email?.address?.split("@")[0] || "";
-
-    return { name, email };
-  }, [user]);
+    return { name: "", email: "" };
+  }, []);
 
   const calendlyUrl = useMemo(() => {
     if (!dealDetail.id) return CALENDLY_URL;

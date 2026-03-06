@@ -1,15 +1,5 @@
-import { usePrivy } from "@privy-io/react-auth";
-import { useMemo } from "react";
+import type { PrivyUserMetadata } from "./privyUserMetadata";
 
-import { privyUserMetadataSchema } from "./privyUserMetadata";
-
-export function usePrivyUserMetadata() {
-  const { user } = usePrivy();
-
-  const metadata = useMemo(() => {
-    if (!user?.customMetadata) return { linkedWallets: [] };
-    return privyUserMetadataSchema.parse(user.customMetadata);
-  }, [user?.customMetadata]);
-
-  return metadata;
+export function usePrivyUserMetadata(): PrivyUserMetadata {
+  return { linkedWallets: [] };
 }
