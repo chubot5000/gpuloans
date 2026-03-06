@@ -1,0 +1,1 @@
+export { NewHomepage } from "./NewHomepage";

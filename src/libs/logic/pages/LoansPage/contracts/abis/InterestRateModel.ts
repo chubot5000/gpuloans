@@ -1,0 +1,72 @@
+export const INTEREST_RATE_MODEL_ABI = [
+  {
+    type: "function",
+    name: "INTEREST_RATE_MODEL_NAME",
+    inputs: [],
+    outputs: [{ name: "", type: "string", internalType: "string" }],
+    stateMutability: "view",
+  },
+  {
+    type: "function",
+    name: "INTEREST_RATE_MODEL_VERSION",
+    inputs: [],
+    outputs: [{ name: "", type: "string", internalType: "string" }],
+    stateMutability: "view",
+  },
+  {
+    type: "function",
+    name: "repayment",
+    inputs: [
+      {
+        name: "terms",
+        type: "tuple",
+        internalType: "struct ILoanRouter.LoanTerms",
+        components: [
+          { name: "expiration", type: "uint64", internalType: "uint64" },
+          { name: "borrower", type: "address", internalType: "address" },
+          { name: "currencyToken", type: "address", internalType: "address" },
+          { name: "collateralToken", type: "address", internalType: "address" },
+          { name: "collateralTokenId", type: "uint256", internalType: "uint256" },
+          { name: "duration", type: "uint64", internalType: "uint64" },
+          { name: "repaymentInterval", type: "uint64", internalType: "uint64" },
+          { name: "interestRateModel", type: "address", internalType: "address" },
+          { name: "gracePeriodRate", type: "uint256", internalType: "uint256" },
+          { name: "gracePeriodDuration", type: "uint256", internalType: "uint256" },
+          {
+            name: "feeSpec",
+            type: "tuple",
+            internalType: "struct ILoanRouter.FeeSpec",
+            components: [
+              { name: "originationFee", type: "uint256", internalType: "uint256" },
+              { name: "exitFee", type: "uint256", internalType: "uint256" },
+            ],
+          },
+          {
+            name: "trancheSpecs",
+            type: "tuple[]",
+            internalType: "struct ILoanRouter.TrancheSpec[]",
+            components: [
+              { name: "lender", type: "address", internalType: "address" },
+              { name: "amount", type: "uint256", internalType: "uint256" },
+              { name: "rate", type: "uint256", internalType: "uint256" },
+            ],
+          },
+          { name: "collateralWrapperContext", type: "bytes", internalType: "bytes" },
+          { name: "options", type: "bytes", internalType: "bytes" },
+        ],
+      },
+      { name: "balance", type: "uint256", internalType: "uint256" },
+      { name: "repaymentDeadline", type: "uint64", internalType: "uint64" },
+      { name: "maturity", type: "uint64", internalType: "uint64" },
+      { name: "timestamp", type: "uint64", internalType: "uint64" },
+    ],
+    outputs: [
+      { name: "principalPayment", type: "uint256", internalType: "uint256" },
+      { name: "interestPayment", type: "uint256", internalType: "uint256" },
+      { name: "trachePrincipals", type: "uint256[]", internalType: "uint256[]" },
+      { name: "tracheInterests", type: "uint256[]", internalType: "uint256[]" },
+      { name: "servicedIntervals", type: "uint64", internalType: "uint64" },
+    ],
+    stateMutability: "view",
+  },
+] as const;

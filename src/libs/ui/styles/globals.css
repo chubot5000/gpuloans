@@ -1,0 +1,255 @@
+@import "./twConfig.css";
+
+@layer base {
+  ::selection {
+    @apply bg-fill-cream;
+    @apply text-text-dark-primary;
+  }
+
+  /* #region  /**=========== Typography =========== */
+  .h0 {
+    @apply text-3xl md:text-5xl;
+  }
+
+  h1,
+  .h1 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h2,
+  .h2 {
+    @apply text-xl md:text-3xl;
+  }
+
+  h3,
+  .h3 {
+    @apply text-lg md:text-2xl;
+  }
+
+  h4,
+  .h4 {
+    @apply text-base md:text-lg;
+  }
+
+  h5,
+  .h5 {
+    @apply text-sm md:text-base;
+  }
+
+  [role="button"],
+  button {
+    @apply cursor-pointer;
+  }
+  /* #endregion  /**======== Typography =========== */
+}
+
+@utility btn-primary {
+  @apply text-bg-page;
+  @apply bg-brown-900;
+  @apply disabled:bg-bg-secondary disabled:text-stone-400 disabled:cursor-not-allowed;
+  @apply hover:not-disabled:bg-brown-700;
+  @apply border-none;
+}
+
+@utility btn-primary-light {
+  @apply text-bg-page;
+  @apply bg-fill-primary;
+  @apply disabled:bg-bg-secondary disabled:text-stone-400 disabled:cursor-not-allowed;
+  @apply hover:not-disabled:bg-[#907B69];
+  @apply border-none;
+}
+
+@utility btn-secondary {
+  @apply text-bg-page;
+  @apply bg-secondary;
+  @apply disabled:bg-bg-secondary disabled:text-stone-400 disabled:cursor-not-allowed;
+  @apply hover:not-disabled:bg-[#C4AD9A];
+  @apply border-none;
+}
+
+@utility btn-tertiary {
+  @apply text-primary;
+  @apply bg-transparent;
+  @apply disabled:bg-bg-secondary disabled:text-stone-400 disabled:cursor-not-allowed;
+  @apply border-primary border;
+  @apply hover:not-disabled:border-[#907B69] hover:not-disabled:text-[#907B69];
+}
+
+@utility btn-xs {
+  @apply h-6 text-xs font-medium;
+}
+
+@utility btn-small {
+  @apply h-7.5 text-sm font-medium;
+}
+
+@utility btn-normal {
+  @apply h-11 text-sm font-medium;
+}
+
+@utility btn-large {
+  @apply h-14 text-base font-medium;
+}
+
+@utility btn {
+  @apply flex items-center justify-center px-4 border flex-shrink-0;
+}
+
+/* Webkit browsers (Chrome, Safari, etc) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) transparent;
+}
+
+.no-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* styles.css */
+.AccordionContent {
+  overflow: hidden;
+}
+.AccordionContent[data-state="open"] {
+  animation: slideDown 300ms ease-out;
+}
+.AccordionContent[data-state="closed"] {
+  animation: slideUp 300ms ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@keyframes caret-blink {
+  0%,
+  70%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-caret-blink {
+  animation: caret-blink 1.2s ease-out infinite;
+}
+
+@utility shadow-base {
+  @apply shadow-[0_0_6px_2px_rgba(87,_74,_65,_0.09)];
+}
+
+/* #region  /**=========== State Styles =========== */
+@utility state-base {
+  @apply animate-spin;
+}
+
+@utility state-todo-base {
+  @apply bg-primary text-bg-page;
+}
+
+@utility state-pending-base {
+  @apply bg-brown-500 text-bg-page;
+}
+
+@utility state-completed-base {
+  @apply text-status-green-500 bg-status-green-50;
+}
+
+@utility state-rejected-base {
+  @apply text-status-red-500 bg-status-red-50;
+}
+
+@utility state-unavailable-base {
+  @apply text-text-secondary bg-bg-secondary;
+}
+
+.state-todo-container .state-item,
+.state-todo {
+  @apply state-todo-base hover:bg-[#907B69] group-hover:bg-[#907B69];
+}
+
+.state-pending-container .state-item,
+.state-pending {
+  @apply state-pending-base hover:bg-[#C4AD9A] group-hover:bg-[#C4AD9A];
+}
+
+.state-unavailable-container .state-item,
+.state-unavailable {
+  @apply state-unavailable-base hover:bg-outline-minor group-hover:bg-outline-minor;
+}
+
+.state-completed-container .state-item,
+.state-completed {
+  @apply state-completed-base hover:bg-[#BFE0BD] group-hover:bg-[#BFE0BD];
+}
+
+.state-rejected-container .state-item,
+.state-rejected {
+  @apply state-rejected-base hover:bg-[#FCE7E4] group-hover:bg-[#FCE7E4];
+}
+
+.state-todo-container .state-item-base {
+  @apply state-todo-base;
+}
+
+.state-pending-container .state-item-base {
+  @apply state-pending-base;
+}
+
+.state-completed-container .state-item-base {
+  @apply state-completed-base;
+}
+
+.state-rejected-container .state-item-base {
+  @apply state-rejected-base;
+}
+
+.state-unavailable-container .state-item-base {
+  @apply state-unavailable-base;
+}
+/* #endregion  /**======== State Styles =========== */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  box-shadow: 0 0 0 30px white inset !important;
+}

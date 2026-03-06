@@ -1,0 +1,48 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "never"
+    }
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "never"
+    },
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "never"
+    }
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "never"
+    }
+  },
+  "cSpell.words": [
+    "DOCUSIGN",
+    "gpuloans",
+    "GPULoans",
+    "PIPEDRIVE",
+    "supabase",
+    "Timelock",
+    "usdai",
+    "usdais"
+  ],
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "lucide-react"
+  ],
+  "typescript.preferences.autoImportSpecifierExcludeRegexes": [
+    "wagmi(/.*)?/query"
+  ],
+  "tailwindCSS.experimental.classRegex": [".*ClassName\\s*=\\s*['\"]([^'\"]*)"],
+}

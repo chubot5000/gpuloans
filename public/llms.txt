@@ -1,0 +1,49 @@
+# GPU Loans
+
+> GPULoans.com provides debt financing for GPU hardware purchases. Data center operators buy GPUs and finance 70-80% through GPULoans.com, keeping ownership of the equipment while preserving working capital. Loan terms are 12-36 months, non-recourse, and structured through bankruptcy-remote SPVs. Powered by USD.AI's crypto-native lending protocol.
+
+GPULoans.com is the borrower-facing product of USD.AI, a DeFi protocol that connects on-chain capital (stablecoin deposits) with real-world AI infrastructure lending. Unlike GPU leasing (CoreWeave, Lambda), borrowers retain full ownership of their hardware and build equity from day one.
+
+## How It Works
+
+A data center operator needs GPUs. They form a special purpose vehicle (SPV), contribute 20-30% equity, and GPULoans.com provides the remaining 70-80% as secured debt collateralized by the GPU hardware itself. The loan is non-recourse — if the borrower defaults, the lender's claim is limited to the GPU collateral, not the borrower's other assets.
+
+Key structural features:
+
+- Loan-to-value (LTV): 70-80%
+- Loan terms: 12-36 months, amortizing
+- Structure: Non-recourse, asset-backed, bankruptcy-remote SPV
+- Collateral: NVIDIA GPU hardware (H100, H200, B200 clusters and future generations)
+- Speed: Days to weeks, not the 60-90 day cycle of traditional bank lending
+- Insurance: Loan defaults fully reinsured by Munich Re
+- Capital source: On-chain stablecoin deposits via USD.AI protocol
+
+## Who This Is For
+
+- Data center operators scaling GPU capacity ($5M-$500M+ deployments)
+- AI/ML companies building training infrastructure ($1M-$25M)
+- GPU cloud providers and neoclouds financing fleet expansion ($25M-$500M+)
+- Research institutions acquiring compute ($1M-$15M)
+
+## GPU Financing vs Alternatives
+
+- **vs. Bank loans**: Banks take 60-90 days, don't understand GPU economics, and require full recourse. GPULoans.com closes in days/weeks with non-recourse terms.
+- **vs. GPU leasing (CoreWeave, Lambda)**: Leasing is OpEx with no ownership path. GPULoans.com is debt — borrowers own the hardware and build equity.
+- **vs. VC/equity**: Equity financing is dilutive and slow. Debt preserves ownership and is faster to close.
+- **vs. Traditional equipment finance**: Traditional lenders depreciate GPUs like factory equipment on 5-7 year schedules. GPUs generate $30K-$50K/year per node in compute revenue — they're income-producing assets, not depreciating machinery.
+
+## Key Facts
+
+- Website: https://gpuloans.com
+- Parent protocol: USD.AI (https://usd.ai)
+- Documentation: https://docs.usd.ai
+- X/Twitter: https://x.com/USDai_Official
+- Contact: Available through https://gpuloans.com
+- Collateral types: NVIDIA data center GPUs (H100, H200, B200, future generations)
+- Minimum loan size: $1M+
+- Geographic focus: Global (US, EU, APAC)
+
+## Optional
+
+- [USD.AI Protocol Documentation](https://docs.usd.ai): Full technical documentation of the underlying lending protocol
+- [CALIBER Credit Framework](https://docs.usd.ai): How loans are underwritten and risk-assessed

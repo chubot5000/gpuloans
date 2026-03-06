@@ -1,0 +1,111 @@
+<svg
+  width="291"
+  height="194"
+  viewBox="0 0 291 194"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <rect
+    x="1"
+    y="1"
+    width="289"
+    height="192"
+    stroke="#A6A09B"
+    stroke-width="2"
+  />
+  <rect
+    x="13"
+    y="37"
+    width="265"
+    height="122"
+    fill="url(#pattern0_61258_58902)"
+    fill-opacity="0.3"
+  />
+  <rect
+    x="13"
+    y="37"
+    width="265"
+    height="122"
+    stroke="#A6A09B"
+    stroke-width="2"
+  />
+  <path
+    d="M84.3381 121L89.4981 117.46L89.5581 110.2H69.4581L98.9781 74.56L98.9181 103.3H106.358V110.2H98.9181V117.46L103.238 121H84.3381ZM89.5581 87.94L76.8381 103.3H89.5581V87.94Z"
+    fill="#655343"
+  />
+  <path
+    d="M127.042 115.392C117.436 105.474 117.689 89.6473 127.608 80.0417C137.526 70.4361 153.353 70.6894 162.958 80.6075C172.564 90.5256 172.311 106.353 162.392 115.958C152.474 125.564 136.647 125.311 127.042 115.392Z"
+    fill="#141414"
+    stroke="#A99482"
+    stroke-width="2.5"
+  />
+  <path
+    d="M140.821 108.507L144.298 113.042L145.008 112.633V105.943L140.821 108.507ZM135.488 101.55L139.676 107.012L145.008 103.746V95.7207L135.488 101.55ZM135.488 91.3271L130.156 94.5928L134.343 100.056V100.055L145.008 93.5244V85.499L135.488 91.3271Z"
+    fill="#FFF1E5"
+  />
+  <path
+    d="M144.999 112.638L145.008 112.633L145.713 113.039L149.187 108.507L144.999 105.943V112.638ZM144.999 103.746L150.332 107.012L154.52 101.55L144.999 95.7207V103.746ZM144.999 93.5244L155.665 100.055V100.056L159.852 94.5928L154.52 91.3271L144.999 85.499V93.5244Z"
+    fill="#A99482"
+  />
+  <path
+    d="M198.338 121L203.498 117.46L203.558 110.2H183.458L212.978 74.56L212.918 103.3H220.358V110.2H212.918V117.46L217.238 121H198.338ZM203.558 87.94L190.838 103.3H203.558V87.94Z"
+    fill="#655343"
+  />
+  <mask id="path-9-inside-1_61258_58902" fill="white">
+    <path d="M2 2H289V25H2V2Z" />
+  </mask>
+  <path d="M2 2H289V25H2V2Z" fill="#F0EFED" />
+  <path
+    d="M289 25V23H2V25V27H289V25Z"
+    fill="#A6A09B"
+    mask="url(#path-9-inside-1_61258_58902)"
+  />
+  <rect x="246" y="8" width="9" height="12" fill="#A99482" />
+  <rect x="257" y="8" width="9" height="12" fill="#A99482" />
+  <rect x="268" y="8" width="9" height="12" fill="#A99482" />
+  <rect width="267" height="12" transform="translate(12 170)" fill="#A99482" />
+  <rect
+    width="267"
+    height="12"
+    transform="translate(12 170)"
+    fill="url(#pattern1_61258_58902)"
+  />
+  <defs>
+    <pattern
+      id="pattern0_61258_58902"
+      patternUnits="userSpaceOnUse"
+      viewBox="-1281 -193 36.2 36.2"
+      width="2.5760298487845441%"
+      height="5.5467739485925271%"
+      patternContentUnits="objectBoundingBox"
+    >
+      <circle cx="-1276" cy="-188" r="5" fill="#A99482" />
+    </pattern>
+    <pattern
+      id="pattern1_61258_58902"
+      patternUnits="userSpaceOnUse"
+      viewBox="41.077 -245.502 39.9883 38.0429"
+      width="17.373204685806972%"
+      height="367.74848822739267%"
+      x="-9.38082"
+      y="-6.8228"
+      patternContentUnits="objectBoundingBox"
+    >
+      <g id="pattern1_61258_58902_inner">
+        <line
+          x1="27.9563"
+          y1="-206.941"
+          x2="43.9563"
+          y2="-228.941"
+          stroke="#F0EFED"
+          stroke-width="10"
+        />
+      </g>
+      <use
+        xlink:href="#pattern1_61258_58902_inner"
+        transform="translate(23.52 0)"
+      />
+    </pattern>
+  </defs>
+</svg>

@@ -1,0 +1,40 @@
+@reference "./twConfig.css";
+
+#post-content {
+  h1 {
+    @apply my-10 text-4xl tracking-wider text-brown-500;
+  }
+
+  h2 {
+    @apply mb-3 mt-6 text-[28px] tracking-wider italic text-brown-500;
+  }
+
+  h3 {
+    @apply mb-3 mt-4 text-xl tracking-wider text-brown-500;
+  }
+
+  p {
+    @apply py-2 text-lg;
+  }
+
+  ol {
+    @apply list-inside list-decimal py-1 pl-2;
+  }
+
+  ul {
+    @apply list-outside list-disc py-1 pl-8;
+  }
+
+  li {
+    @apply py-1;
+  }
+
+  hr {
+    @apply mt-6;
+  }
+
+  a {
+    @apply text-brown-500 underline underline-offset-1;
+  }
+  @apply text-brown-900 mt-8 text-left;
+}
