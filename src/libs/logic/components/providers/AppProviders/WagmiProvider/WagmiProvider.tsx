@@ -31,9 +31,16 @@ export interface WagmiProviderProps {
 }
 
 export function WagmiProvider({ children, config }: WagmiProviderProps) {
+  const appId = process.env["NEXT_PUBLIC_PRIVY_APP_ID"];
+
+  // Skip Privy/Wagmi providers when no valid app ID is configured
+  if (!appId || appId === "placeholder") {
+    return <>{children}</>;
+  }
+
   return (
     <PrivyProvider
-      appId={`${process.env["NEXT_PUBLIC_PRIVY_APP_ID"]}`}
+      appId={appId}
       config={{
         appearance: {
           theme: "light",
